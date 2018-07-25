@@ -7,7 +7,7 @@ var redis = new Redis({
 });
 
 router.get('/', function(req, res, next) {
-    let value = redis.zrange('foo', 0, 100, 'WITHSCORES');
+    let value = redis.zrange('ASX:CSR:1m', 0, 100, 'WITHSCORES');
     console.log(value);
     res.send(value);
 });
